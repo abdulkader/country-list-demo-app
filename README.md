@@ -6,6 +6,7 @@ A simple country list demo app created with
 2. Redux for state management
 3. Tailwind CSS for app styling
 4. React Hooks
+5. Preview app deployed to [Vercel](https://vercel.com/)
 
 
 
@@ -22,3 +23,8 @@ cp .env.example .env
 4. Run `yarn build` to Build the application
 5. Run `yarn serve` to preview application in Production Mode
 6. Run `yarn dev` to run the application in Development mode
+
+
+### Demo URL
+
+Click [here](https://country-list-demo.vercel.app/login) to See preview app deployed to [vercel](https://vercel.com/)
