@@ -3,6 +3,7 @@ import cx from 'classnames';
 import PropTypes from 'prop-types';
 
 const InputField = ({ hasError, errorMessage, className, ...props }) => {
+  console.log(hasError)
   return (
     <Fragment>
       <input

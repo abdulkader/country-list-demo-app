@@ -12,7 +12,7 @@ const validationSchema = Yup.object().shape({
   password: Yup.string()
     .min(6, 'Password should be minimum 6 char long')
     .max(50, 'Password is too long')
-    .required('Required'),
+    .required('Password is Required'),
 });
 
 const LoginForm = ({ onSubmit }) => {
@@ -26,8 +26,8 @@ const LoginForm = ({ onSubmit }) => {
     onSubmit,
   });
   return (
-    <form onSubmit={formik.handleSubmit} className="mx-auto w-1/3">
-      <div className="shadow-sm">
+    <form onSubmit={formik.handleSubmit} className="mx-auto w-1/3 bg-gray-50 p-4 mt-8 rounded-sm shadow-xl" noValidate>
+      <div>
         <div className="py-1.5">
           <label
             htmlFor="email-address"
@@ -42,7 +42,7 @@ const LoginForm = ({ onSubmit }) => {
             onChange={formik.handleChange}
             value={formik.values.username}
             placeholder="Enter your username"
-            hasError={formik.touched.username && formik.errors.username}
+            hasError={formik.touched.username && formik.errors.username !== ''}
             errorMessage={formik.errors.username}
           />
         </div>
@@ -60,7 +60,7 @@ const LoginForm = ({ onSubmit }) => {
             onChange={formik.handleChange}
             value={formik.values.password}
             placeholder="Enter Password"
-            hasError={formik.touched.password && formik.errors.password}
+            hasError={formik.touched.password && formik.errors.password !== ''}
             errorMessage={formik.errors.password}
           />
         </div>
