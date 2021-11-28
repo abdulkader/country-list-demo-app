@@ -49,8 +49,11 @@ const DashboardPage = () => {
     localStore.del(AUTH_KEY);
     dispatch(logoutAction());
   };
+  const seoData = {
+    title: 'Dashboard',
+  };
   return (
-    <MainLayout>
+    <MainLayout seoData={seoData}>
       <Container>
         {loading ? (
           <Loader />

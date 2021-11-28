@@ -24,9 +24,12 @@ const CountryDetailsPage = () => {
     }
   }, [fetched, dispatch]);
 
-  const countryDetail = getCountryByCode(countryState, code);
+  const countryDetail = getCountryByCode(countryState, code?.toUpperCase());
+  const seoData = {
+    title: `Details - ${countryDetail?.name?.official}`,
+  };
   return (
-    <MainLayout>
+    <MainLayout seoData={seoData}>
       <Container>
         {loading ? (
           <Loader />

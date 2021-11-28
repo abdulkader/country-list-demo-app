@@ -22,8 +22,11 @@ const LoginPage = () => {
     localStore.set(AUTH_KEY, userInfo);
     dispatch(loginAction(userInfo));
   };
+  const seoData = {
+    title: 'Login'
+  }
   return (
-    <MainLayout>
+    <MainLayout seoData={seoData}>
       <LoginForm onSubmit={handleSubmit} />
     </MainLayout>
   );
