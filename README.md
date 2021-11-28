@@ -27,4 +27,4 @@ cp .env.example .env
 
 ### Demo URL
 
-Click [here](https://country-list-demo.vercel.app/login) to See preview app deployed to [vercel](https://vercel.com/)
+Click [here](https://country-list-demo.vercel.app) to See preview app deployed to [vercel](https://vercel.com/)
