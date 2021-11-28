@@ -1,14 +1,10 @@
 import React, { lazy, Fragment } from 'react';
 import { Routes, Route, Outlet } from 'react-router-dom';
 import ProtectedLayout from '@/layouts/ProtectedLayout';
-
-const lazyPageLoader = (name, file = 'index') =>
-  lazy(() => import(`../pages/${name}/${file}.jsx`));
-
-const Dashboard = lazyPageLoader('Dashboard');
-const LoginPage = lazyPageLoader('Auth/Login');
-const CountryDetailsPage = lazyPageLoader('Country');
-const NotFound404 = lazyPageLoader('ErrorPages', 'NotFound404');
+import Dashboard from '@/pages/Dashboard';
+import LoginPage from '@/pages/Auth/Login';
+import CountryDetailsPage from '@/pages/Country';
+import NotFound404 from '@/pages/ErrorPages/NotFound404';
 
 const RouterLayout = () => (
   <Fragment>
